@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  text-align: center; /* Center the logo */
+}
+
+.logo img {
+  width: 100px; /* Adjust the width of the logo as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Optional: Add spacing below the logo */
+}
+
+header {
+  background-image: url("path/to/your/image.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.gmail-icon {
+  font-size: 24px;
+  color: #ff0000; /* Change color as needed */
+}
+
+.intro {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.podcasts-heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.podcasts {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.podcast-item {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .podcasts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}

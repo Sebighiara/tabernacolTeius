@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/contact-styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="contact-container">
+      <h1>Contactati-ne</h1>
+      <p>
+        Daca aveti intrebari sau nelamuriri, va rugam sa ne contactati prin una
+        din variantele de mai jos:
+      </p>
+
+      <div class="contact-icons">
+        <a href="#" class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/groups/1562010743889652"
+          class="contact-icon"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@tabernacolulteius8601/featured"
+          class="contact-icon"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <!-- Add more contact icons as needed -->
+      </div>
+
+      <div class="links">
+        <a href="{{ url_for('home') }}">Acasa</a>
+        <a href="{{ url_for('presentations') }}">Prezentari</a>
+        <!-- Add more links as needed -->
+      </div>
+
+      <div class="contact-icons">
+        <!-- Contact icons (optional) -->
+      </div>
+    </div>
+  </body>
+</html>
