@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 import sqlite3
 
 app = Flask(__name__)
@@ -6,6 +6,15 @@ app = Flask(__name__)
 # Function to connect to the SQLite database
 def connect_db():
     return sqlite3.connect('presentations.db')
+
+#Function to fetch videos from the database
+def get_videos():
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM youtubeVideos")
+    videos = cursor.fetchall()
+    conn.close()
+    return videos
 
 # Function to fetch presentations from the database
 def get_presentations():
@@ -18,7 +27,11 @@ def get_presentations():
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    try:
+        videos_data = get_videos()
+        return render_template("index.html", videos=videos_data)
+    except Exception as e:
+        abort(404)
 
 # Route to render the presentations page
 @app.route("/presentations")

@@ -38,55 +38,19 @@
       <h2 class="podcasts-heading">Predici</h2>
 
       <div class="podcasts">
+        {% for video in videos %}
         <div class="podcast-item">
           <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/{{ video[2] }}"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          <h3>Title of the First Podcast</h3>
-          <p>Description of the First Podcast</p>
+          <h3>{{ video[1] }}</h3>
+          <p class="date-posted">{{ video[3] }}</p>
         </div>
-        <div class="podcast-item">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h3>Title of the First Podcast</h3>
-          <p>Description of the First Podcast</p>
-        </div>
-        <div class="podcast-item">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h3>Title of the First Podcast</h3>
-          <p>Description of the First Podcast</p>
-        </div>
-        <div class="podcast-item">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <h3>Title of the First Podcast</h3>
-          <p>Description of the First Podcast</p>
-        </div>
-        <!-- Add more podcast items as needed -->
+        {% endfor %}
       </div>
     </div>
 
