@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, redirect
 import sqlite3
 
 app = Flask(__name__)
@@ -41,6 +41,10 @@ def presentations():
         return render_template("presentations.html", presentations=presentations_data)
     except Exception as e:
         abort(404)
+
+@app.route('/download/<path:presentation_url>')
+def download_presentation(presentation_url):
+    return redirect(presentation_url)
 
 @app.route("/contact")
 def contact():
